@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Selectors",
+    "description": "Selectors are the way of how we can reference DOM elements.",
+    "items": [
+      {
+        "name": "Universal",
+        "description": "The universal selector, specified simply as an asterisk (*), matches all elements.",
+        "example": "https://imgur.com/kriuqrc"
+      },
+      {
+        "name": "Element",
+        "description": "The universal selector, specified simply as an asterisk (*), matches all elements.",
+        "example": "https://imgur.com/kriuqrc"
+      },
+      {
+        "name": "Id",
+        "description": "The universal selector, specified simply as an asterisk (*), matches all elements.",
+        "example": "https://imgur.com/kriuqrc"
+      },
+      {
+        "name": "Class",
+        "description": "The universal selector, specified simply as an asterisk (*), matches all elements.",
+        "example": "https://imgur.com/kriuqrc"
+      },
+      {
+        "name": "Attribute",
+        "description": "The universal selector, specified simply as an asterisk (*), matches all elements.",
+        "example": "https://imgur.com/kriuqrc"
+      }
+    ]
+  }
+]
