@@ -4,6 +4,12 @@
   --color-laurel: #BDC4A7;
   --color-pale: #D5E1A3;
   --color-mindaro: #E2F89C;
+  --color-dark-gray: #333;
+  --btn-red: #f60100;
+  --btn-dark-blue: #002540;
+  --btn-black: #000;
+  --btn-blue: #0070f7;
+  --color-white: #fff;
 
 }
 
@@ -53,12 +59,21 @@ code {
 
 .property {
   align-items: center;
-  border: 1px solid red;
+  background-color: var(--btn-red);
+  border-radius: 5px;
+  cursor: pointer;
   display: flex;
   min-height: 50px;
   justify-content: center;
   width: 100px;
   padding: 20px;
+}
+
+.property p {
+  color: var(--color-white);
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 .content {
@@ -79,6 +94,22 @@ code {
 .content__items {
   display: flex;
   flex-direction: column;
-  flex: 1;
   margin-left: 50px;
+}
+
+.content__body {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+
+pre {
+  background: var(--color-dark-gray);
+  border: 5px solid var(--color-light-blue);
+  color: var(--color-white);
+  padding: 10px;
+  white-space: pre;
+  word-wrap: break-word;
+  overflow: auto;
 }
