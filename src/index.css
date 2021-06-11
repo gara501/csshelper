@@ -67,6 +67,7 @@ code {
   justify-content: center;
   width: 100px;
   padding: 20px;
+  text-align: center;
 }
 
 .property p {
@@ -86,22 +87,56 @@ code {
   padding: 20px 0;
   position: absolute;
   justify-self: flex-start;
+  transform: translateY(100vh);
+  transition: ease 300ms transform;
   width: 100%;
   gap: 20px;
+}
+
+.content.show {
+  transform: translateY(0);
+}
+
+.close {
+  background: transparent;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+  font-size: 2rem;
+  font-family: inherit;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.close img {
+  transition: all 100ms linear;
+  width: 30px;
+}
+
+.close:active img {
+  transform: scale(.9);
+}
+
+.close:hover img {
+  filter: drop-shadow(5px 5px 5px #222);
+  
 }
 
 .content__header,
 .content__items {
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
+  margin: 0 50px;
+  width: 100%;
 }
 
 .content__body {
-  align-items: center;
   display: flex;
-  flex-flow: row wrap;
-  gap: 10px;
+  flex-flow: column wrap;
+  gap: 20px;
+  max-height: 60vh;
+  overflow-y: auto;
 }
 
 pre {
@@ -112,4 +147,9 @@ pre {
   white-space: pre;
   word-wrap: break-word;
   overflow: auto;
+}
+
+[title="csshelper"] {
+  color: var(--color-white);
+  text-decoration: underline;
 }

@@ -6,14 +6,18 @@ import useContentfull from './helpers/useContentfull'
 function App() {
 
   const [element, setElement] = useState([]);
+  const [selected, setSelected] = useState('');
 
   const {data} = useContentfull();
-  console.log('DATA', data)
 
   const selectItem = (e) => {
     const selectedItem = data.filter(item => item.fields.slug === e.currentTarget.id);
     setElement(selectedItem[0].fields);
-    console.log(selectedItem[0].fields)
+    setSelected('show');
+  }
+
+  const closePopup = () => {
+    setSelected('');
   }
 
   return (
@@ -26,7 +30,7 @@ function App() {
           </div>
         ))}
       </div>
-      <Content data={element}></Content>
+      <Content data={element} selected={selected} close={closePopup}></Content>
     </div>
   );
 }
