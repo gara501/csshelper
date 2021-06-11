@@ -1,6 +1,7 @@
 import * as contentful from 'contentful';
 import { useState, useEffect } from 'react'
 
+
 const useContentful = () => {
 	const [data, setData] = useState([]);
 	
@@ -8,10 +9,12 @@ const useContentful = () => {
     getData();
   }, [])
 
+	console.log(process.env.ACCESS_TOKEN)
+
 	const client = contentful.createClient({
-		space: '88oez7ymnho5',
-		environment: 'master',
-		accessToken: '-h2Po1jqj5qHph9ZJKW9oV74kDtsexDrWo90xwgHckM'
+		space: process.env.REACT_APP_SPACE,
+		environment: process.env.REACT_APP_ENVIRONMENT,
+		accessToken: process.env.REACT_APP_ACCESS_TOKEN
 	})
 
 	const getData = () => {
