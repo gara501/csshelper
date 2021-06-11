@@ -140,13 +140,13 @@ code {
 .content__items {
   display: flex;
   flex-direction: column;
-  margin: 0 50px;
+  margin: 0 10px;
   max-width: 100%;
 }
 
 .content__body {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   gap: 20px;
   max-height: 60vh;
   overflow-y: auto;
@@ -156,8 +156,10 @@ pre {
   background: var(--color-dark-gray);
   border: 5px solid var(--color-light-blue);
   color: var(--color-white);
+  flex: 1;
+  min-width: 300px;
   padding: 10px;
-  white-space: pre;
+  white-space: pre-wrap;
   word-wrap: break-word;
   overflow: auto;
 }

@@ -4,13 +4,7 @@ import closeImage from '../images/cancel.png'
 
 
 const Content = ({data, selected, close}) => {
-  const [markupData, setMarkupData] = useState(null);
   const [showPopup, setShowPopup] = useState('');
-
-  useEffect(() => {
-    setMarkupData(data.body);
-    console.log(data.body)
-  }, [markupData])
 
   useEffect(() => {
     setShowPopup(selected);
